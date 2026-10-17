@@ -24,7 +24,7 @@ export function ActiveTripScreen({ navigation }) {
         <Text style={styles.emptyText}>No hay ningún viaje activo en este momento.</Text>
         <CustomButton
           title="Volver al Inicio"
-          onPress={() => navigation.navigate('Home')}
+          onPress={() => navigation.navigate('MainApp', { screen: 'Home' })}
           style={{ marginTop: spacing.md }}
         />
       </View>
@@ -57,7 +57,7 @@ export function ActiveTripScreen({ navigation }) {
           style: 'destructive',
           onPress: async () => {
             await cancelActiveTrip('Cancelado por conductor antes de recoger');
-            navigation.navigate('Home');
+            navigation.navigate('MainApp', { screen: 'Home' });
           },
         },
       ]

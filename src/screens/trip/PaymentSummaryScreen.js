@@ -28,7 +28,7 @@ export function PaymentSummaryScreen({ navigation }) {
         <Text style={styles.title}>No hay ningún cobro pendiente.</Text>
         <CustomButton
           title="Ir al Inicio"
-          onPress={() => navigation.navigate('Home')}
+          onPress={() => navigation.navigate('MainApp', { screen: 'Home' })}
           style={{ marginTop: spacing.md }}
         />
       </View>
@@ -48,7 +48,7 @@ export function PaymentSummaryScreen({ navigation }) {
       Alert.alert(
         'Efectivo Recibido',
         `Cobraste $${(activeTrip.fare + (activeTrip.tip || 0)).toLocaleString('es-CO')} COP en mano.\n\nSe debitó la comisión de la plataforma (-$${(activeTrip.commission).toLocaleString('es-CO')} COP) de tu saldo virtual.`,
-        [{ text: 'Listo', onPress: () => navigation.navigate('Home') }]
+        [{ text: 'Listo', onPress: () => navigation.navigate('MainApp', { screen: 'Home' }) }]
       );
     }, 800);
   };
@@ -68,7 +68,7 @@ export function PaymentSummaryScreen({ navigation }) {
         Alert.alert(
           '¡Pago Aprobado por la Pasarela!',
           `El pasajero pagó con tarjeta de prueba en Mercado Pago.\n\nSe han acreditado +$${(activeTrip.driverEarnings).toLocaleString('es-CO')} COP a tu saldo en la plataforma.`,
-          [{ text: 'Continuar', onPress: () => navigation.navigate('Home') }]
+          [{ text: 'Continuar', onPress: () => navigation.navigate('MainApp', { screen: 'Home' }) }]
         );
       } else {
         setPaymentStatus('rejected');
