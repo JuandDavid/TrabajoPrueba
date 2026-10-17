@@ -48,7 +48,7 @@ export function EarningsScreen({ navigation }) {
           Ganancias digitales acreditadas menos comisiones por viajes en efectivo.
           {earnings.balance < 0 && (
             <Text style={{ color: '#FF8A80', fontWeight: '800' }}>
-              {'\n'}⚠️ Tienes saldo negativo por comisiones en efectivo pendientes.
+              {'\n'}Aviso: Tienes saldo negativo por comisiones en efectivo pendientes.
             </Text>
           )}
         </Text>

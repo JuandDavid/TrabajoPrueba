@@ -133,7 +133,7 @@ export function ProfileScreen({ navigation }) {
           onChangeText={setVehicleColor}
         />
         <CustomButton
-          title={isSaved ? '¡Guardado con Éxito! ✓' : 'Guardar Cambios'}
+          title={isSaved ? 'Guardado con éxito' : 'Guardar Cambios'}
           variant="secondary"
           onPress={handleSave}
         />
@@ -148,7 +148,7 @@ export function ProfileScreen({ navigation }) {
             onPress={() => changeLanguage('es')}
           >
             <Text style={[styles.langText, language === 'es' && styles.langTextActive]}>
-              🇨🇴 Español
+              Español
             </Text>
           </TouchableOpacity>
           <TouchableOpacity
@@ -156,7 +156,7 @@ export function ProfileScreen({ navigation }) {
             onPress={() => changeLanguage('en')}
           >
             <Text style={[styles.langText, language === 'en' && styles.langTextActive]}>
-              🇺🇸 English
+              English
             </Text>
           </TouchableOpacity>
         </View>

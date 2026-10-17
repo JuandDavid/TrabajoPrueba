@@ -96,7 +96,7 @@ export function ActiveTripScreen({ navigation }) {
           <View style={styles.passengerInfo}>
             <Text style={styles.passengerName}>{activeTrip.passengerName}</Text>
             <Text style={styles.passengerCategory}>
-              {activeTrip.category?.toUpperCase()} • {activeTrip.paymentMethod === 'cash' ? '💵 Efectivo' : '💳 Pago Digital'}
+              {activeTrip.category?.toUpperCase()} • {activeTrip.paymentMethod === 'cash' ? 'Efectivo' : 'Pago Digital'}
             </Text>
           </View>
           <TouchableOpacity

@@ -111,8 +111,8 @@ export function HomeScreen({ navigation }) {
             <View style={styles.activeTripInfo}>
               <Text style={styles.activeTripTitle}>
                 {activeTrip.status === 'driver_arriving'
-                  ? '🚘 En camino a recoger pasajero'
-                  : '📍 Viaje en curso hacia el destino'}
+                  ? 'En camino a recoger pasajero'
+                  : 'Viaje en curso hacia el destino'}
               </Text>
               <Text style={styles.activeTripSubtitle}>
                 {activeTrip.passengerName} • ${(activeTrip.fare || 0).toLocaleString('es-CO')} COP

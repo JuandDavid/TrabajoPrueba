@@ -219,10 +219,10 @@ export function HistoryScreen({ navigation }) {
                 <View style={styles.detailBox}>
                   <Text style={styles.detailLabel}>RECORRIDO:</Text>
                   <Text style={styles.detailAddressText}>
-                    📍 <Text style={{ fontWeight: '700' }}>Origen:</Text> {selectedTripDetail.origin?.address}
+                    <Text style={{ fontWeight: '700' }}>Origen: </Text>{selectedTripDetail.origin?.address}
                   </Text>
                   <Text style={[styles.detailAddressText, { marginTop: 4 }]}>
-                    🏁 <Text style={{ fontWeight: '700' }}>Destino:</Text> {selectedTripDetail.destination?.address}
+                    <Text style={{ fontWeight: '700' }}>Destino: </Text>{selectedTripDetail.destination?.address}
                   </Text>
                 </View>
 
@@ -238,7 +238,10 @@ export function HistoryScreen({ navigation }) {
                   </View>
                   <View style={styles.detailGridItem}>
                     <Text style={styles.gridLabel}>Calificación</Text>
-                    <Text style={styles.gridValue}>⭐️ {selectedTripDetail.rating || 5}.0</Text>
+                    <View style={{ flexDirection: 'row', alignItems: 'center', gap: 4, marginTop: 2 }}>
+                      <Ionicons name="star" size={14} color="#FFB800" />
+                      <Text style={styles.gridValue}>{selectedTripDetail.rating || 5}.0</Text>
+                    </View>
                   </View>
                 </View>
 

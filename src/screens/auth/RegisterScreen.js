@@ -342,7 +342,7 @@ export function RegisterScreen({ navigation }) {
             />
 
             <CustomButton
-              title="Continuar a Vehículo →"
+              title="Continuar a Vehículo"
               onPress={() => setActiveTab(1)}
               style={{ marginTop: spacing.md }}
             />
@@ -450,13 +450,13 @@ export function RegisterScreen({ navigation }) {
 
             <View style={{ flexDirection: 'row', gap: spacing.md, marginTop: spacing.md }}>
               <CustomButton
-                title="← Anterior"
+                title="Anterior"
                 variant="secondary"
                 onPress={() => setActiveTab(0)}
                 style={{ flex: 1 }}
               />
               <CustomButton
-                title="Continuar a Documentos →"
+                title="Continuar a Documentos"
                 onPress={() => setActiveTab(2)}
                 style={{ flex: 2 }}
               />
@@ -482,7 +482,7 @@ export function RegisterScreen({ navigation }) {
               <TouchableOpacity style={styles.uploadBtn} onPress={() => pickImage('license')}>
                 <Ionicons name="card-outline" size={20} color={colors.textPrimary} />
                 <Text style={styles.uploadBtnText}>
-                  {docs.licensePhotoUri ? 'Licencia Cargada ✓' : 'Subir Foto de Licencia'}
+                  {docs.licensePhotoUri ? 'Licencia Cargada' : 'Subir Foto de Licencia'}
                 </Text>
               </TouchableOpacity>
               {Boolean(errors.licensePhoto) && (
@@ -495,7 +495,7 @@ export function RegisterScreen({ navigation }) {
               <TouchableOpacity style={styles.uploadBtn} onPress={() => pickImage('soat')}>
                 <Ionicons name="shield-checkmark-outline" size={20} color={colors.textPrimary} />
                 <Text style={styles.uploadBtnText}>
-                  {docs.soatPhotoUri ? 'SOAT Cargado ✓' : 'Subir Foto de SOAT'}
+                  {docs.soatPhotoUri ? 'SOAT Cargado' : 'Subir Foto de SOAT'}
                 </Text>
               </TouchableOpacity>
               {Boolean(errors.soatPhoto) && (
@@ -508,7 +508,7 @@ export function RegisterScreen({ navigation }) {
               <TouchableOpacity style={styles.uploadBtn} onPress={() => pickImage('tecno')}>
                 <Ionicons name="construct-outline" size={20} color={colors.textPrimary} />
                 <Text style={styles.uploadBtnText}>
-                  {docs.tecnoPhotoUri ? 'Técnico-mecánica Cargada ✓' : 'Subir Foto Técnico-mecánica'}
+                  {docs.tecnoPhotoUri ? 'Técnico-mecánica Cargada' : 'Subir Foto Técnico-mecánica'}
                 </Text>
               </TouchableOpacity>
               <Text style={styles.helperTextDoc}>Obligatoria para vehículos con más de 5 años</Text>
